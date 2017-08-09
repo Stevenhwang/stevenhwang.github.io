@@ -1,0 +1,4 @@
+- name: simple blog
+  descr: "A simple blog that records my life."
+  image: pong.png
+  github: https://github.com/stevenhwang/stevenhwang.github.io
