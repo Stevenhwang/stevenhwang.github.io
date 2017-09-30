@@ -5,7 +5,7 @@
 #
 title: steven's blog
 email: steven@greatfeatservices.com
-description: A simple blog for my self.
+description: A simple blog for recording my life.
 url: https://stevenhwang.github.io
 
 
@@ -38,7 +38,7 @@ owner:
   job: "DevOps"
   bio: "I want to live a simple life!"
   email: steven@greatfeatservices.com
-  disqus-shortname: #username
+  disqus-shortname: https-stevenhwang-github-io
   twitter: #username
   facebook: steven.hwang00
   google:
