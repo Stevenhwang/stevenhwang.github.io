@@ -20,8 +20,6 @@ highlighter:       rouge
 excerpt_separator: <!--more-->
 permalink:         /articles/:year-:month/:title
 
-paginate: 8
-
 kramdown:
   auto_ids: true
   footnote_nr: 1
