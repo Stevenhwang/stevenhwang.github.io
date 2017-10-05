@@ -1,7 +1,6 @@
 ---
 layout: post
 title: 做一个 jekyll blog 吧
-excerpt: "关于 jekyll blog 的说明"
 categories: [jekyll]
 tags: jekyll
 comments: true

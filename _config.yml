@@ -1,66 +1,27 @@
-#
-###################################
-# Site wide configuration
-####################################
-#
-title: steven's blog
+title: "I'm Steven"
+title-font-size: '2em' # a provision to adjust the size of your title. If it is too long then do resize to a smaller value. By default it will be 4em.
+
+owner: Steven
 email: steven@greatfeatservices.com
 description: A simple blog for recording my life.
 url: https://stevenhwang.github.io
 
+permalink: :title/
 
-#
-###################################
-# Jekyll configuration
-####################################
-#
-timezone:          Asia/Manila
-markdown:          kramdown
-highlighter:       rouge
-excerpt_separator: <!--more-->
-permalink:         /articles/:year-:month/:title
+# Build settings
+timezone: Asia/Manila
+markdown: kramdown
+highlight: rouge
+paginate: 8
+paginate_path: /page:num/
 
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  enable_coderay: false
+# Comments
+disqus-shortname: https-stevenhwang-github-io
 
-#
-###################################
-# Site Owner configuration
-####################################
-#
-owner:
-  name: steven
-  avatar: avatar.png
-  job: "DevOps"
-  bio: "I want to live a simple life!"
-  email: steven@greatfeatservices.com
-  disqus-shortname: https-stevenhwang-github-io
-  twitter: #username
-  facebook: steven.hwang00
-  google:
-    plus: #username
-    analytics:
-    verify:
-    ad-client:
-    ad-slot:
-  bing-verify:
-  github: stevenhwang
-  stackoverflow: #123456/username   from a "http://stackoverflow.com/users/123456/username" link
-  linkedin: #username
-  xing: #username
-  instagram: #username
-  lastfm: #username
-  tumblr: #username
-  pinterest: #username
-  foursquare: #username
-  steam: #username
-  dribbble: #username
-  youtube: #username
-  soundcloud: #username
-  weibo: #username
-  flickr: #username
-  codepen: #username
+# CSS
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-paginate
+  - jekyll-seo-tag
