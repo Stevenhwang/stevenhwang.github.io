@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JavaScript学习二
+title: JavaScript函数
 categories: [JavaScript学习]
 tags: JavaScript
 ---
