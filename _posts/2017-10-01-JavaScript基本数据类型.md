@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JavaScript基本语法
+title: JavaScript基本数据类型
 categories: [JavaScript学习]
 tags: JavaScript
 ---
