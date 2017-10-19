@@ -33,7 +33,7 @@ tags: JavaScript
       name: '小明',
       birth: 1990,
       age: getAge
-};
+  };
 
 xiaoming.age(); // 25, 正常结果
 getAge(); // NaN
@@ -62,7 +62,7 @@ getAge(); // NaN
   Math.max.apply(null, [3, 5, 4]); // 5
   Math.max.call(null, 3, 5, 4); // 5
 ```
->对普通函数调用，我们通常把this绑定为null。
+>对普通函数调用，我们通常把 this 绑定为 null。
 
 &emsp;&emsp;利用 apply()，我们还可以动态改变函数的行为。JavaScript 的所有对象都是动态的，即使内置的函数，我们也可以重新指向新的函数。
 
@@ -82,7 +82,3 @@ getAge(); // NaN
   parseInt('30');
   count; // 3
 ```
-
-
-
-
