@@ -1,6 +1,6 @@
 ---
 layout: post
-title: JavaScript语法
+title: JavaScript基本语法
 categories: [JavaScript学习]
 tags: JavaScript
 ---
@@ -14,11 +14,7 @@ tags: JavaScript
 ```
 
 ## 字符串
-&emsp;&emsp;字符串是以单引号或双引号括起来的任意文本。
-* ES6 新增一种多行字符串的表示方法，用反引号来表示: ``` `...` ``` 。
-* ES6 新增一种嵌入式字符串，也是使用反引号：``` `...${...}...` ``` ，但是 ``` ${} ``` 内的变量会被替换。
-* 字符串是不可变的，如果对字符串的某个索引赋值，不会有任何错误，但是，也没有任何效果。
-* 常用的字符串方法：
+&emsp;&emsp;字符串是以单引号或双引号括起来的任意文本。ES6 新增一种多行字符串的表示方法，用反引号来表示。同时还新增一种嵌入式字符串，也是使用反引号：``` `...${...}...` ``` ， ``` ${} ``` 内的变量会被替换。注意 JavaScript 字符串是不可变的，如果对字符串的某个索引赋值，不会有任何错误，但是，也没有任何效果。
 ```javascript
   var s = 'Hello, world';
   s.length; // 12
@@ -40,7 +36,6 @@ tags: JavaScript
 
 ## 数组
 &emsp;&emsp;数组是一组按顺序排列的集合，数组元素可以是任意数据类型，JavaScript 的数组是动态数组。
-* 常用的数组方法：
 ```javascript
   var arr = ['A', 'B', 'C', 'D'];
   arr.length; // 4
@@ -80,6 +75,7 @@ tags: JavaScript
 
 ## Map 和 Set
 &emsp;&emsp;JavaScript 的默认对象表示方式 {} 可以被视为其他语言中的 Map 或 Dictionary 的数据结构，即一组键值对。但是 JavaScript 的对象有个小问题，就是键必须是字符串，但实际上 Number 或者其他数据类型作为键也是非常合理的。为了解决这个问题，最新的 ES6 规范引入了新的数据类型 Map 和 Set。
+
 &emsp;&emsp;Map 是一组键值对的结构，具有极快的查找速度。初始化 Map 需要一个二维数组，或者直接初始化一个空 Map。例如：
 ```javascript
   var m = new Map([['Michael', 95], ['Bob', 75], ['Tracy', 85]]);
@@ -89,12 +85,16 @@ tags: JavaScript
   m.delete('Adam'); // 删除key 'Adam'
   m.get('Adam'); // undefined
 ```
+
 &emsp;&emsp;Set 是一组 key 的集合，不存储 value。由于 key 不能重复，所以在 Set 中，没有重复的元素。要创建一个 Set，需要提供一个 Array 作为输入，或者直接创建一个空 Set。例如：
 ```javascript
   var s = new Set([1, 2, 3, 3, '3']);
   s.add(4)；// Set { 1, 2, 3, '3', 4 }
   s.delete(3); // true
 ```
+
 &emsp;&emsp;遍历 Array 可以采用下标循环，遍历 Map 和 Set 就无法使用下标。为了统一集合类型，ES6 标准引入了新的 iterable 类型，Array、Map 和 Set 都属于 iterable 类型。具有 iterable 类型的集合可以通过新的 for...of 循环来遍历。
+
 &emsp;&emsp;for...in 循环由于历史遗留问题，它遍历的实际上是对象的属性。一个 Array 数组实际上也是一个对象，它的每个元素的索引被视为一个属性。当我们手动给 Array 对象添加了额外的属性后，for...in 循环将带来意想不到的意外效果。for...of 循环则完全修复了这些问题，它只循环集合本身的元素。
+
 &emsp;&emsp;更好的方式是直接使用 iterable 内置的 forEach() 方法，它接收一个函数，每次迭代就自动回调该函数: a.forEach(function (element, index, array) {...}); 。如果对某些参数不感兴趣，由于 JavaScript 的函数调用不要求参数必须一致，因此可以忽略它们。
