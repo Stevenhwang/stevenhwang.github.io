@@ -90,4 +90,4 @@ tags: JavaScript
 
 &emsp;&emsp;比如现在我们有一个 xiaoming 对象，那么可以使用 `JSON.stringify(xiaoming)` 来把它序列化成 JSON 格式的字符串。如果我们还想要精确控制如何序列化 xiaoming ，可以给 xiaoming 定义一个 toJSON() 的方法，直接返回 JSON 应该序列化的数据。
 
-&emsp;&emsp;拿到一个 JSON 格式的字符串，我们可以直接用 JSON.parse() 把它反序列化成一个JavaScript对象。
+&emsp;&emsp;拿到一个 JSON 格式的字符串，我们可以直接用 `JSON.parse()` 把它反序列化成一个JavaScript对象。
