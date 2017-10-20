@@ -16,7 +16,6 @@ tags: JavaScript
       return x * x;
   }
 ```
-
 &emsp;&emsp;箭头函数相当于匿名函数，并且简化了函数定义。箭头函数有两种格式，一种像上面的，只包含一个表达式，连 { ... } 和 return 都省略掉了。还有一种可以包含多条语句，这时候就不能省略 { ... } 和 return：
 ```javascript
   x => {

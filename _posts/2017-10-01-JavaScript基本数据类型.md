@@ -6,7 +6,7 @@ tags: JavaScript
 ---
 
 ## Number
-&emsp;&emsp;JavaScript 不区分整数和浮点数，统一用 Number 表示，以下都是合法的 Number：
+&emsp;&emsp;JavaScript **不区分整数和浮点数**，统一用 Number 表示，以下都是合法的 Number：
 ```javascript
   1.2345e3; // 科学计数法表示1.2345x1000，等同于1234.5
   NaN; // 表示Not a Number，当无法计算结果时用NaN表示
@@ -14,7 +14,7 @@ tags: JavaScript
 ```
 
 ## 字符串
-&emsp;&emsp;字符串是以单引号或双引号括起来的任意文本。ES6 新增一种多行字符串的表示方法，用反引号来表示。同时还新增一种嵌入式字符串，也是使用反引号：``` `...${...}...` ``` ， ``` ${} ``` 内的变量会被替换。注意 JavaScript 字符串是不可变的，如果对字符串的某个索引赋值，不会有任何错误，但是，也没有任何效果。
+&emsp;&emsp;字符串是以单引号或双引号括起来的任意文本。ES6 新增一种多行字符串的表示方法，用 **反引号** 来表示。同时还新增一种嵌入式字符串，也是使用反引号，其中 ${} 内的变量会被替换（类似于ruby的 #{}）。注意 **JavaScript 字符串是不可变的**，如果对字符串的某个索引赋值，不会有任何错误，但是也没有任何效果。
 ```javascript
   var s = 'Hello, world';
   s.length; // 12
@@ -30,12 +30,12 @@ tags: JavaScript
 
 ## 布尔值
 &emsp;&emsp;一个布尔值只有 true、false 两种值。
-* JavaScript 的相等运算符 == 会自动转换数据类型再比较，而 === 不会，所以要坚持使用 === 。
+* JavaScript 的相等运算符 == 会自动转换数据类型再比较是否相等，而 === 不会先转换，所以要坚持使用 === 。
 * NaN 这个特殊的 Number 与所有其他值都不相等包括它自己，唯一判断 NaN 的方法是使用 isNaN() 函数。
 * JavaScript 把 null、undefined、0、NaN 和空字符串''视为 false，其他值一概视为 true。
 
 ## 数组
-&emsp;&emsp;数组是一组按顺序排列的集合，数组元素可以是任意数据类型，JavaScript 的数组是动态数组。
+&emsp;&emsp;数组是一组按顺序排列的集合，数组元素可以是任意数据类型，**JavaScript 的数组是动态数组**。
 ```javascript
   var arr = ['A', 'B', 'C', 'D'];
   arr.length; // 4
@@ -55,7 +55,7 @@ tags: JavaScript
 ```
 
 ## 对象
-&emsp;&emsp;JavaScript 的对象是一组由键-值组成的无序集合，也是动态类型，例如：
+&emsp;&emsp;JavaScript 的对象是一组由键-值组成的无序集合，也是 **动态类型**，例如：
 ```javascript
   var person = {
       name: 'Bob',
@@ -71,7 +71,7 @@ tags: JavaScript
   delete person['school']; // 删除一个不存在的属性也不会报错
   'name' in person; // true , 可以用 in 操作符检测对象是否拥有某一属性
 ```
-&emsp;&emsp;不过如果 in 判断一个属性存在，这个属性不一定是 person 的，它可能是 person 继承得到的，比如 toString 定义在 object 对象中，而所有的对象最终都会在原型链上指向 object。要判断一个属性是否是 person 自身拥有的而不是继承得到的，可以用 hasOwnProperty() 方法。
+&emsp;&emsp;注意如果 in 判断一个属性存在，这个属性不一定是 person 的，它可能是 person 继承得到的，比如 toString 定义在 object 对象中，而所有的对象最终都会在原型链上指向 object。要判断一个属性是否是 person 自身拥有的而不是继承得到的，可以用 hasOwnProperty() 方法。
 
 ## Map 和 Set
 &emsp;&emsp;JavaScript 的默认对象表示方式 {} 可以被视为其他语言中的 Map 或 Dictionary 的数据结构，即一组键值对。但是 JavaScript 的对象有个小问题，就是键必须是字符串，但实际上 Number 或者其他数据类型作为键也是非常合理的。为了解决这个问题，最新的 ES6 规范引入了新的数据类型 Map 和 Set。

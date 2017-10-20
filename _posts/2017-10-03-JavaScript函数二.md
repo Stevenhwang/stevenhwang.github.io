@@ -35,8 +35,8 @@ tags: JavaScript
       age: getAge
   };
 
-xiaoming.age(); // 25, 正常结果
-getAge(); // NaN
+  xiaoming.age(); // 25, 正常结果
+  getAge(); // NaN
 ```
 >J如果以对象的方法形式调用，比如 xiaoming.age()，该函数的 this 指向被调用的对象，也就是 xiaoming，这是符合我们预期的；如果单独调用函数，比如 getAge()，此时，该函数的 this 指向全局对象，也就是 window。由于这是一个设计错误，ECMA 决定，在 strict 模式下让函数的 this 指向 undefined。
 

@@ -6,7 +6,7 @@ tags: JavaScript
 ---
 
 ## 高阶函数
-&emsp;&emsp;一个函数可以接收另一个函数作为参数，这种函数就被称为高阶函数。
+&emsp;&emsp;一个函数可以 **接收另一个函数作为参数**，这种函数就被称为高阶函数。
 
 &emsp;&emsp;map() 方法定义在 JavaScript 的 Array 中，我们调用 Array 的 map() 方法，传入我们自己的函数，就得到了一个新的 Array 作为结果：
 ```javascript
@@ -17,7 +17,7 @@ tags: JavaScript
   var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   arr.map(pow); // [1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
-&emsp;&emsp;map() 作为高阶函数，事实上它把运算规则抽象了，因此，我们不但可以计算简单的 f(x)=x*x ，还可以计算任意复杂的函数，比如，把 Array 的所有数字转为字符串：
+&emsp;&emsp;map() 作为高阶函数，实际上它把运算规则抽象了，因此，我们不但可以计算简单的 f(x)=x*x ，还可以计算任意复杂的函数，比如，把 Array 的所有数字转为字符串：
 ```javascript
   var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   arr.map(String); // ['1', '2', '3', '4', '5', '6', '7', '8', '9']
@@ -96,4 +96,4 @@ tags: JavaScript
       return 0;
   }); // [1, 2, 10, 20]
 ```
-&emsp;&emsp;最后需要注意的是，sort() 方法会直接对 Array 进行修改，它返回的结果仍是当前 Array。
+&emsp;&emsp;最后需要注意的是，sort() 方法会直接对 Array 进行修改，它返回的结果仍是当前 Array 这个对象。
