@@ -57,7 +57,7 @@ tags: JavaScript
 ```
 &emsp;&emsp;3个函数的执行结果全部都是16！原因就在于返回的函数引用了变量 i，但它并非立刻执行。等到3个函数都返回时，它们所引用的变量 i 已经变成了4，因此最终结果为16。
 
-&emsp;&emsp;JavaScript 有一种创建一个匿名函数并立刻执行的语法：
+&emsp;&emsp;JavaScript 还有一种创建一个匿名函数并立刻执行的语法：
 ```javascript
   (function (x) {
       return x * x;

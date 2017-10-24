@@ -37,7 +37,7 @@ tags: JavaScript
 &emsp;&emsp;要加载一个新页面，可以调用 location.assign()。如果要重新加载当前页面，调用 location.reload()方法非常方便。
 
 ### document
-&emsp;&emsp;document 对象表示当前页面。由于 HTML 在浏览器中以 DOM 形式表示为树形结构，document 对象就是整个 DOM 树的根节点。比如 document 的 title 属性是从 HTML 文档中的 <title>xxx</title> 读取的，而且可以动态改变。要查找 DOM 树的某个节点，需要从 document 对象开始查找。最常用的查找是根据 ID 和 Tag Name。用 document 对象提供的 getElementById() 和 getElementsByTagName() 可以按ID获得一个 DOM 节点和按 Tag 名称获得一组 DOM 节点。
+&emsp;&emsp;document 对象表示当前页面。由于 HTML 在浏览器中以 DOM 形式表示为树形结构，document 对象就是整个 DOM 树的根节点。比如 document 的 title 属性是从 HTML 文档中的 <title>xxx</title> 读取的，而且可以动态改变。要查找 DOM 树的某个节点，需要从 document 对象开始查找。最常用的查找是根据 ID 和 Tag Name，用 document 对象提供的 getElementById() 和 getElementsByTagName() 可以按ID获得一个 DOM 节点和按 Tag 名称获得一组 DOM 节点。
 
 &emsp;&emsp;document 对象还有一个 cookie 属性，可以获取当前页面的 cookie。cookie 是由服务器发送的 key-value 标示符。因为 HTTP 协议是无状态的，但是服务器要区分到底是哪个用户发过来的请求，就可以用 cookie 来区分。当一个用户成功登录后，服务器发送一个 cookie 给浏览器，例如 user=ABC123XYZ(加密的字符串)...，此后，浏览器访问该网站时，会在请求头附上这个 cookie，服务器根据 cookie 即可区分出用户。cookie 还可以存储网站的一些设置，例如，页面显示的语言等等。由于 JavaScript 能读取到页面的 cookie，而用户的登录信息通常也存在 cookie 中，这就造成了巨大的安全隐患。为了解决这个问题，服务器在设置 cookie 时可以使用 httpOnly，设定了 httpOnly 的 cookie 将不能被 JavaScript 读取。这个行为由浏览器实现，主流浏览器均支持 httpOnly 选项，IE 从 IE6 SP1 开始支持。为了确保安全，服务器端在设置 cookie时，应该始终坚持使用 httpOnly。
 
