@@ -32,7 +32,7 @@ tags: JavaScript
 &emsp;&emsp;一个布尔值只有 true、false 两种值。
 * JavaScript 的相等运算符 == 会自动转换数据类型再比较是否相等，而 === 不会先转换，所以要坚持使用 === 。
 * NaN 这个特殊的 Number 与所有其他值都不相等包括它自己，唯一判断 NaN 的方法是使用 isNaN() 函数。
-* JavaScript 把 null、undefined、0、NaN 和空字符串''视为 false，其他值一概视为 true。
+* JavaScript 把 null、undefined、0、NaN 和空字符串 '' 视为 false，其他值一概视为 true。
 
 ## 数组
 &emsp;&emsp;数组是一组按顺序排列的集合，数组元素可以是任意数据类型，**JavaScript 的数组是动态数组**。
