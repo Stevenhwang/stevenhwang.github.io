@@ -5,7 +5,7 @@ categories: [jekyll]
 tags: jekyll blog github
 ---
 
-&emsp;&emsp;好久没做点小玩意了，今天也是忙里偷闲，心血来潮地想整个博客玩玩。要想搭建一个个人博客，最简单的方法当然是用 github pages + jekyll 的组合啦。
+好久没做点小玩意了，今天也是忙里偷闲，心血来潮地想整个博客玩玩。要想搭建一个个人博客，最简单的方法当然是用 github pages + jekyll 的组合啦。
 
 ### 重点
 >github
