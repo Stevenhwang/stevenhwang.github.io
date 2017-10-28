@@ -6,7 +6,7 @@ tags: JavaScript
 ---
 
 ## 标准对象
-&emsp;&emsp;在 JavaScript 的世界里，一切都是对象。但是某些对象还是和其他对象不太一样。为了区分对象的类型，我们用 typeof 操作符获取对象的类型，它总是返回一个字符串：
+在 JavaScript 的世界里，一切都是对象。但是某些对象还是和其他对象不太一样。为了区分对象的类型，我们用 typeof 操作符获取对象的类型，它总是返回一个字符串：
 ```javascript
   typeof 123; // 'number'
   typeof NaN; // 'number'
@@ -18,15 +18,15 @@ tags: JavaScript
   typeof []; // 'object'
   typeof {}; // 'object'
 ```
-&emsp;&emsp;可见，number、string、boolean、function 和 undefined 有别于其他类型。特别注意 null 的类型是 object，Array 的类型也是 object，如果我们用 typeof 的话将无法区分出 null、Array 和通常意义上的 object——{}。
+可见，number、string、boolean、function 和 undefined 有别于其他类型。特别注意 null 的类型是 object，Array 的类型也是 object，如果我们用 typeof 的话将无法区分出 null、Array 和通常意义上的 object——{}。
 
-&emsp;&emsp;除了这些类型外，JavaScript 还提供了包装对象。number、boolean 和 string 都有包装对象。没错，在 JavaScript 中，字符串也区分 string 类型和它的包装类型。包装对象用 new 创建：
+除了这些类型外，JavaScript 还提供了包装对象。number、boolean 和 string 都有包装对象。没错，在 JavaScript 中，字符串也区分 string 类型和它的包装类型。包装对象用 new 创建：
 ```javascript
   var n = new Number(123); // 123,生成了新的包装类型
   var b = new Boolean(true); // true,生成了新的包装类型
   var s = new String('str'); // 'str',生成了新的包装类型
 ```
-&emsp;&emsp;虽然包装对象看上去和原来的值一模一样，显示出来也是一模一样，但他们的类型已经变为 object了！所以，包装对象和原始值用 === 比较会返回 false：
+虽然包装对象看上去和原来的值一模一样，显示出来也是一模一样，但他们的类型已经变为 object了！所以，包装对象和原始值用 === 比较会返回 false：
 ```javascript
   typeof new Number(123); // 'object'
   new Number(123) === 123; // false
@@ -39,7 +39,7 @@ tags: JavaScript
 ```
 >所以闲的蛋疼也不要使用包装对象！尤其是针对 string 类型！！！
 
-&emsp;&emsp;如果我们在使用 Number、Boolean 和 String 时，没有写new，这时，Number()、Boolean() 和 String() 会被当做普通函数，把任何类型的数据转换为 number、boolean 和 string 类型（注意不是其包装类型）：
+如果我们在使用 Number、Boolean 和 String 时，没有写new，这时，Number()、Boolean() 和 String() 会被当做普通函数，把任何类型的数据转换为 number、boolean 和 string 类型（注意不是其包装类型）：
 ```javascript
   var n = Number('123'); // 123，相当于parseInt()或parseFloat()
   typeof n; // 'number'
@@ -54,7 +54,7 @@ tags: JavaScript
   typeof s; // 'string'
 ```
 
-&emsp;&emsp;总结一下，有这么几条规则需要遵守：
+总结一下，有这么几条规则需要遵守：
 * 不要使用 new Number()、new Boolean()、new String() 创建包装对象；
 
 * 用 parseInt() 或 parseFloat() 来转换任意类型到 number；
@@ -75,7 +75,7 @@ tags: JavaScript
 
 * 不是任何对象都有 toString() 方法，null 和 undefined 就没有。
 
-&emsp;&emsp;最后还有一点要注意的是，number 对象调用 toString() 需要特殊处理一下：
+最后还有一点要注意的是，number 对象调用 toString() 需要特殊处理一下：
 ```javascript
   123.toString(); // SyntaxError
   123..toString(); // '123', 注意是两个点！
